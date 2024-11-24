@@ -1,0 +1,122 @@
+\documentclass[10pt]{beamer}
+\usepackage[utf8]{inputenc}
+% \usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{datetime2}
+\usepackage {mathtools}
+\usepackage{utopia} %font utopia imported
+\usetheme{CambridgeUS}
+\usecolortheme{dolphin}
+
+% set colors
+\definecolor{myNewColorA}{RGB}{132,36,72}
+\definecolor{myNewColorB}{RGB}{205,90,139}
+\definecolor{myNewColorC}{RGB}{230,157,177}
+\setbeamercolor*{palette primary}{bg=myNewColorC}
+\setbeamercolor*{palette secondary}{bg=myNewColorB, fg = white}
+\setbeamercolor*{palette tertiary}{bg=myNewColorA, fg = white}
+\setbeamercolor*{titlelike}{fg=myNewColorA}
+\setbeamercolor*{title}{bg=myNewColorA, fg = white}
+\setbeamercolor*{item}{fg=myNewColorA}
+\setbeamercolor*{caption name}{fg=myNewColorA}
+\usefonttheme{professionalfonts}
+\usepackage{natbib}
+\usepackage{hyperref}
+%------------------------------------------------------------
+\titlegraphic{\includegraphics[height=1.5cm]{szu.jpg}}
+
+\DTMnewdatestyle{chineseYearDot}{
+  \renewcommand{\DTMdisplaydate}[4]{##1.##2.##3} % ##1=年, ##2=月, ##3=日
+}
+
+% 使用新定义的日期格式
+\DTMsetdatestyle{chineseYearDot}
+
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{institute}{size=\small}
+\title[Shenzhen University]{I am title. I am title. I am title. I am title. }
+% \subtitle{The Top Forwards in the World}
+\author[Author Name]{Author 1, Author 2 }
+
+\institute[szuxxx@email.szu.edu.cn]{ Shenzhen University\\College of Computer Science and Software Engineering}
+\date[Nickname \today]
+{\today}
+
+%------------------------------------------------------------
+% This block of commands puts the table of contents at the 
+% beginning of each section and highlights the current section:
+% \AtBeginSection[]
+% {
+%  \begin{frame}
+%    \frametitle{Contents}
+%    \tableofcontents[currentsection]
+%  \end{frame}
+% }
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+\begin{frame}
+\frametitle{Contents}
+\tableofcontents
+\end{frame}
+%------------------------------------------------------------
+\section{Introduction}
+    \begin{frame}{Introduction}
+    
+    \begin{itemize}
+        \item GCNs have been widely used in many fields. 
+        \item GCN consists with two primary steps: (1) Combination and (2) Aggreagation
+        
+    \end{itemize}
+    \end{frame}
+\section{Background \& Motivation}
+    \begin{frame}{Background}
+        Background
+    \end{frame}
+
+    \begin{frame}{Motivation}
+        Motivation
+    \end{frame}
+
+\section{Experiment}
+    \begin{frame}{Experiment}
+    \end{frame}
+
+
+
+
+\section{Conclusion}
+    \begin{frame}{Conclusion}
+    ss
+    \end{frame}
+
+
+
+
+
+
+\section*{Acknowledgement}  
+\begin{frame}
+\textcolor{myNewColorA}{\Huge{\centerline{Thank you!}}}
+\end{frame}
+
+\end{document}
+
+
+
